@@ -23,3 +23,15 @@ Melee weapon - Sword , axe, bat
 
 Uploader/downloader - Buy/sell item form iventory
 
+Validators
+
+Polymorphism
+
+Interface
+
+Gui/Jframe
+
+Exception handling
+
+
+
