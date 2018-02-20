@@ -9,7 +9,6 @@ package javaapplication6;
  *
  * @author angli
  */
-public class plumbingCategory {
-    public plumbingCategory(){
-    }  
+public class displayInventory {
+    
 }
