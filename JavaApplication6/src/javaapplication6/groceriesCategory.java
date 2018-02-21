@@ -8,22 +8,35 @@ package javaapplication6;
 
 /**
  *
- * @author angli
+ * @author angli and tapiwa
  */
 public class groceriesCategory extends Products {
-    
-    public groceriesCategory(double myPrice, String myName, String mySummary, int myID, int myQty) {
-        super(myPrice, myName, mySummary, myID, myQty);
+	
+
+    public groceriesCategory(double myPrice, String myName, String mySummary, int myID) {
+        super(myPrice, myName, mySummary, myID);
     }
-    
-    //make some fruits and vegetables dissapear over time
-    @Override public void removeFromInventory(){
-    }
-    
-    @Override public void addToInventory(){
-    }
-    
-    @Override public void summarizeSelf(){
+    /*
+    @Override public void summarizeSelf() {
         //I am fruits an vegetables, I perish over time from your inventory
-    }
+        
+    }*/
+
+    @Override void addToInventory(AngTapsInventory inv) {
+            // TODO Auto-generated method stub
+            inv.addToInventory(groceriesCategory.this);
+            
+            //Oh no some food preished when too many items are stored in the bag!
+            if(inv.productsList.size()>5){
+             inv.removeFromInventory(groceriesCategory.this);
+             inv.removeFromInventory(groceriesCategory.this);
+            }
+	}
+
+    @Override void removeFromInventory(AngTapsInventory inv) {
+		// TODO Auto-generated method stub
+		inv.removeFromInventory(groceriesCategory.this);
+
+	}
+
 }

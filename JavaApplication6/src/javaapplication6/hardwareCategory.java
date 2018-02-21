@@ -9,19 +9,22 @@ package javaapplication6;
  *
  * @author angli
  */
-public abstract class hardwareCategory extends Products {
-     public hardwareCategory(double myPrice, String myName, String mySummary, int myID, int myQty) {
-         super(myPrice, myName, mySummary, myID, myQty);
+public class hardwareCategory extends Products {
+     public hardwareCategory(double myPrice, String myName, String mySummary, int myID) {
+         super(myPrice, myName, mySummary, myID);
      }
      
-    //Very valuable can be stolen 10% chance every second
-    @Override public void removeFromInventory(){
+    //Normal add or remove
+    @Override public void removeFromInventory(AngTapsInventory inv){
+        inv.removeFromInventory(hardwareCategory.this);
     }
     
-    @Override public void addToInventory(){
+    @Override public void addToInventory(AngTapsInventory inv){
+        inv.addToInventory(hardwareCategory.this);
     }
     
+    /*
     @Override public void summarizeSelf(){
         //summarizes total amount stolen over last 10 seconds
-    }
+    }*/
 }

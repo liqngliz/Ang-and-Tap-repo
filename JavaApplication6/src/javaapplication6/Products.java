@@ -16,7 +16,7 @@ public abstract class Products {
         //Stock ID is same for all of the same type of stock
         //Stock Qty is the amount that is in this product batch to be added/removed from the inventory
         
-	private int stockID, stockQty;
+	private int stockID;
 	private String stockName, stockSummary;
         
 	//Availability handled by inventory class when total stock amount reaches 0
@@ -24,12 +24,12 @@ public abstract class Products {
 	
 	//constructor
 	
-	public Products(double price, String StockName, String stockSummary, int stockID, int stockQty) {
+	public Products(double price, String StockName, String stockSummary, int stockID) {
 		   this.price = price;
 		   this.stockID = stockID;
 		   this.stockName = StockName;
 		   this.stockSummary = stockSummary;
-		   this.stockQty = stockQty;
+		   
         }   
         
 	// Getters and Setters
@@ -49,14 +49,6 @@ public abstract class Products {
             this.stockID = myStockID;
         }
         
-        public int getStockQty() {
-            return this.stockQty;
-        }
-        
-        public void setStockQty(int myStockQty){
-            this.stockQty = myStockQty;
-        }
-        
         public String getStockName(){
             return this.stockName;
         }
@@ -73,8 +65,22 @@ public abstract class Products {
             this.stockSummary = myStockSummary;
         }
         
+        
         //abstract methods: describe self, add to the inventory, remove from the inventory
-        abstract void summarizeSelf();
-        abstract void addToInventory();
-        abstract void removeFromInventory();
+        //abstract void summarizeSelf();
+        abstract void addToInventory(AngTapsInventory inv);
+        abstract void removeFromInventory(AngTapsInventory inv);
+
+        /**
+	public boolean removeFromInventory(String stockLevels) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+	public boolean addToInventory(String stockLevels) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+        **/
+
 }
