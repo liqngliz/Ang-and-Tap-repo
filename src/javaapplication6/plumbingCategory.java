@@ -7,9 +7,15 @@ package javaapplication6;
 
 /**
  *
- * @author angli
+ * @author angli and tapiwa
  */
-public class plumbingCategory {
-    public plumbingCategory(){
-    }  
+public interface plumbingCategory  {
+    public void Display();
 }
+ interface electricalsCategory  {
+    public void Sale(); 
+}
+ 
+abstract class KitchenProducts implements plumbingCategory, electricalsCategory {
+	 
+ }

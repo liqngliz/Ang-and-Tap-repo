@@ -45,7 +45,7 @@ public class AngTapsInventory {
         stockGUI.add(descInput);
 
 
-        int invPane = JOptionPane.showConfirmDialog(null, stockGUI,"Enter the grocery inventory", JOptionPane.OK_CANCEL_OPTION);
+        int invPane = JOptionPane.showConfirmDialog(null, stockGUI,"Grocery inventory", JOptionPane.OK_CANCEL_OPTION);
         if(invPane == JOptionPane.OK_OPTION) {
             String inputPrice = priceInput.getText();
             int conPrice = Integer.parseInt(inputPrice);
