@@ -13,7 +13,7 @@ package javaapplication6;
 public class groceriesCategory extends Products {
 	private static final int MaxStock = 3; 
 	private String[] stockMAX; // course codes 
-    
+
     public groceriesCategory(double myPrice, String myName, String mySummary, int myID, int myQty) {
         super(myPrice, myName, mySummary, myID, myQty);
     }

@@ -73,9 +73,6 @@ public abstract class Products {
             this.stockSummary = myStockSummary;
         }
         
-    	public void printPrice(){
-    		System.out.println("My price is: " + price);
-    	}
         
         //abstract methods: describe self, add to the inventory, remove from the inventory
         abstract void summarizeSelf();
@@ -91,6 +88,5 @@ public abstract class Products {
 			// TODO Auto-generated method stub
 			return false;
 		}
-
 
 }
